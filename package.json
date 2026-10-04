@@ -1,7 +1,0 @@
-{
-  "name":"hotel-management-server",
-  "version":"3.6.0",
-  "type":"module",
-  "scripts":{"start":"node server.js"},
-  "dependencies":{"dotenv":"latest","express":"latest","nodemailer":"latest","razorpay":"latest"}
-}
