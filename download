@@ -1,0 +1,74 @@
+# =========================
+# Node / Server
+# =========================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# =========================
+# Logs
+# =========================
+
+logs/
+*.log
+
+# =========================
+# OS files
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Editor files
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+# Temporary files
+# =========================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# =========================
+# Build / cache
+# =========================
+
+dist/
+build/
+.cache/
+coverage/
+
+# =========================
+# Local server data
+# =========================
+
+server/data/*.local.json
+
+# Keep example files
+!server/data/*.json
+
+# =========================
+# Secrets / private keys
+# =========================
+
+*.pem
+*.key
+*.crt
+
+# Never upload private credentials
+credentials.json
+service-account.json

@@ -1,0 +1,137 @@
+{
+  "hotelSettings": {
+    "hotelName": "My Hotel",
+    "hotelAddress": "Main Road, City, India",
+    "hotelPhone": "9876543210",
+    "hotelEmail": "info@myhotel.com",
+    "gstNumber": "",
+    "invoicePrefix": "INV",
+    "currency": "INR",
+    "defaultGst": 5,
+    "checkInTime": "12:00",
+    "checkOutTime": "11:00",
+    "receiptFooter": "Thank you for staying with us.",
+    "enableRestaurant": true,
+    "enableHousekeeping": true,
+    "enableGst": true,
+    "upiId": "9353689775@upi",
+    "upiName": "My Hotel"
+  },
+
+  "hotelRooms": [
+    {
+      "id": "ROOM-101",
+      "roomNumber": "101",
+      "type": "Standard",
+      "floor": 1,
+      "rate": 1500,
+      "status": "available",
+      "description": "Standard room"
+    },
+    {
+      "id": "ROOM-102",
+      "roomNumber": "102",
+      "type": "Standard",
+      "floor": 1,
+      "rate": 1500,
+      "status": "available",
+      "description": "Standard room"
+    },
+    {
+      "id": "ROOM-201",
+      "roomNumber": "201",
+      "type": "Deluxe",
+      "floor": 2,
+      "rate": 2200,
+      "status": "available",
+      "description": "Deluxe room"
+    },
+    {
+      "id": "ROOM-202",
+      "roomNumber": "202",
+      "type": "Deluxe",
+      "floor": 2,
+      "rate": 2200,
+      "status": "available",
+      "description": "Deluxe room"
+    },
+    {
+      "id": "ROOM-301",
+      "roomNumber": "301",
+      "type": "Super Deluxe",
+      "floor": 3,
+      "rate": 3200,
+      "status": "available",
+      "description": "Super Deluxe room"
+    }
+  ],
+
+  "hotelGuests": [
+    {
+      "id": "GUEST-001",
+      "fullName": "Rahul Sharma",
+      "mobile": "9876543210",
+      "idType": "Aadhaar",
+      "idNumber": "XXXX-XXXX-1234",
+      "address": "Delhi, India",
+      "createdAt": "2026-10-01T10:00:00.000Z"
+    }
+  ],
+
+  "hotelBookings": [],
+
+  "hotelInvoices": [],
+
+  "restaurantOrders": [],
+
+  "hotelExpenses": [],
+
+  "hotelHousekeeping": [
+    {
+      "roomId": "ROOM-101",
+      "status": "Clean",
+      "lastCleaned": "2026-10-04T08:00:00.000Z",
+      "note": "",
+      "updatedAt": "2026-10-04T08:00:00.000Z"
+    },
+    {
+      "roomId": "ROOM-102",
+      "status": "Clean",
+      "lastCleaned": "2026-10-04T08:15:00.000Z",
+      "note": "",
+      "updatedAt": "2026-10-04T08:15:00.000Z"
+    },
+    {
+      "roomId": "ROOM-201",
+      "status": "Inspected",
+      "lastCleaned": "2026-10-04T08:30:00.000Z",
+      "note": "Room inspected and ready.",
+      "updatedAt": "2026-10-04T09:00:00.000Z"
+    },
+    {
+      "roomId": "ROOM-202",
+      "status": "Dirty",
+      "lastCleaned": "",
+      "note": "Cleaning required.",
+      "updatedAt": "2026-10-04T09:15:00.000Z"
+    },
+    {
+      "roomId": "ROOM-301",
+      "status": "Clean",
+      "lastCleaned": "2026-10-04T09:30:00.000Z",
+      "note": "",
+      "updatedAt": "2026-10-04T09:30:00.000Z"
+    }
+  ],
+
+  "hotelLicense": {
+    "licenseId": "DEMO-HOTEL-001",
+    "customerName": "My Hotel",
+    "mobile": "9876543210",
+    "status": "Active",
+    "startDate": "2026-10-01T00:00:00.000Z",
+    "expiryDate": "2026-10-31T23:59:59.000Z"
+  },
+
+  "hotelRenewalRequests": []
+}

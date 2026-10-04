@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hotel Management System</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- LOGIN -->
+  <section id="loginScreen" class="login-screen">
+
+    <div class="login-card">
+
+      <h1>🏨 Hotel Management</h1>
+      <p class="muted">Hotel Management System</p>
+
+      <form id="loginForm">
+
+        <label>Username</label>
+        <input
+          id="loginUsername"
+          type="text"
+          autocomplete="username"
+          placeholder="Username"
+          required
+        >
+
+        <label>Password</label>
+        <input
+          id="loginPassword"
+          type="password"
+          autocomplete="current-password"
+          placeholder="Password"
+          required
+        >
+
+        <button type="submit" class="btn primary">
+          Login
+        </button>
+
+      </form>
+
+      <button
+        type="button"
+        id="resetDemoBtn"
+        class="btn secondary"
+      >
+        Reset Demo Data
+      </button>
+
+      <div id="loginMessage" class="message"></div>
+
+      <p class="login-help">
+        Demo Login:<br>
+        <strong>admin</strong> / <strong>admin123</strong>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- MAIN APPLICATION -->
+  <section id="appScreen" class="app-screen hidden">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="brand">
+        <div class="brand-icon">🏨</div>
+
+        <div>
+          <strong id="sidebarHotelName">
+            My Hotel
+          </strong>
+
+          <small>
+            Management System
+          </small>
+        </div>
+      </div>
+
+
+      <nav class="sidebar-menu">
+
+        <button
+          type="button"
+          class="nav-btn active"
+          data-page="dashboard"
+        >
+          📊 Dashboard
+        </button>
+
+        <button
+          type="button"
+          class="nav-btn"
+          data-page="rooms"
+        >
+          🛏️ Rooms
+        </button>
+
+        <button
+          type="button"
+          class="nav-btn"
+          data-page="bookings"
+        >
+          📅 Bookings
+        </button>
+
+        <button
+          type="button"
+          class="nav-btn"
+          data-page="guests"
+        >
+          👤 Guests / KYC
+        </button>
+
+        <button
+          type="button"
+          class="nav-btn"
+          data-page="billing"
+        >
+          🧾 Billing
+        </button>
+
+        <button
+          type="button"
+          class="nav-btn"
+          data-page="restaurant"
+        >
+          🍽️ Restaurant / POS
+        </button>
+
+        <button
+          type="button"
+          class="nav-btn"
+          data-page="housekeeping"
+        >
+          🧹 Housekeeping
+        </button>
+
+        <button
+          type="button"
+          class="nav-btn"
+          data-page="reports"
+        >
+          📈 Reports
+        </button>
+
+        <button
+          type="button"
+          class="nav-btn"
+          data-page="subscription"
+        >
+          🔑 Subscription
+        </button>
+
+        <button
+          type="button"
+          class="nav-btn"
+          data-page="settings"
+        >
+          ⚙️ Settings
+        </button>
+
+      </nav>
+
+
+      <div class="sidebar-bottom">
+
+        <button
+          type="button"
+          id="renewalRequestBtn"
+          class="renewal-alert"
+        >
+          🔔 Renewal Requests
+          <span id="renewalCount">0</span>
+        </button>
+
+        <button
+          type="button"
+          id="logoutBtn"
+          class="logout-btn"
+        >
+          🚪 Logout
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- CONTENT -->
+    <main class="main-content">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+
+        <div>
+          <h2 id="pageTitle">
+            Dashboard
+          </h2>
+
+          <p id="pageSubtitle">
+            Hotel overview
+          </p>
+        </div>
+
+
+        <div class="topbar-right">
+
+          <span
+            id="licenseStatus"
+            class="status-badge"
+          >
+            Checking...
+          </span>
+
+          <span id="currentDate"></span>
+
+        </div>
+
+      </header>
+
+
+      <!-- PAGE CONTAINER -->
+      <div id="pageContainer" class="page-container">
+
+        <!-- Pages will be loaded by app.js -->
+
+        <div class="loading">
+          Loading...
+        </div>
+
+      </div>
+
+    </main>
+
+  </section>
+
+
+  <!-- GLOBAL MODAL -->
+  <div
+    id="globalModal"
+    class="modal hidden"
+  >
+
+    <div class="modal-overlay" data-close-modal></div>
+
+    <div class="modal-card">
+
+      <div class="modal-header">
+
+        <h3 id="modalTitle">
+          Details
+        </h3>
+
+        <button
+          type="button"
+          id="modalCloseBtn"
+          class="modal-close"
+        >
+          ×
+        </button>
+
+      </div>
+
+      <div id="modalBody" class="modal-body"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- TOAST -->
+  <div
+    id="toastContainer"
+    class="toast-container"
+  ></div>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="./js/app.js"></script>
+
+</body>
+</html>

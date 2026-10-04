@@ -1,0 +1,17 @@
+[
+  {
+    "id": "REN-123456789",
+    "customerName": "Demo Hotel",
+    "customerMobile": "9876543210",
+    "licenseId": "LIC-001",
+    "plan": "1 Year",
+    "amount": 1999,
+    "transactionId": "UTR123456789",
+    "paymentDate": "2026-10-04",
+    "note": "",
+    "status": "Pending",
+    "createdAt": "2026-10-04T10:00:00.000Z",
+    "verifiedAt": null,
+    "verifiedBy": null
+  }
+]

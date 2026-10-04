@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Hotel Renewal</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="renewal-page">
+
+  <main class="renewal-container">
+
+    <!-- HEADER -->
+    <section class="renewal-header">
+
+      <div class="renewal-logo">
+        🏨
+      </div>
+
+      <h1>Hotel Software Renewal</h1>
+
+      <p>
+        Renew your hotel management software from anywhere.
+      </p>
+
+    </section>
+
+
+    <!-- PAYMENT CARD -->
+    <section class="renewal-card">
+
+      <h2>Renewal Payment</h2>
+
+      <p class="muted">
+        Pay using the UPI ID or scan the QR code.
+      </p>
+
+
+      <!-- CUSTOMER DETAILS -->
+      <div class="form-grid">
+
+        <div class="form-group">
+
+          <label for="customerName">
+            Customer / Hotel Name *
+          </label>
+
+          <input
+            id="customerName"
+            type="text"
+            placeholder="Hotel Name"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="customerMobile">
+            Mobile Number *
+          </label>
+
+          <input
+            id="customerMobile"
+            type="tel"
+            placeholder="Mobile Number"
+            maxlength="15"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="licenseId">
+            License ID *
+          </label>
+
+          <input
+            id="licenseId"
+            type="text"
+            placeholder="Example: HOTEL-1001"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="renewalPlan">
+            Renewal Plan *
+          </label>
+
+          <select id="renewalPlan">
+
+            <option value="30">
+              30 Days — ₹299
+            </option>
+
+            <option value="365">
+              1 Year — ₹1999
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <!-- UPI DETAILS -->
+      <div class="upi-box">
+
+        <h3>💳 Pay Using UPI</h3>
+
+        <div class="upi-id">
+          9353689775@upi
+        </div>
+
+        <p>
+          UPI ID को copy करके अपने UPI app में payment करें
+          या QR scan करें।
+        </p>
+
+        <button
+          type="button"
+          id="showRenewalQrBtn"
+          class="btn primary"
+        >
+          📱 Show Payment QR
+        </button>
+
+      </div>
+
+
+      <!-- QR AREA -->
+      <div
+        id="renewalQrArea"
+        class="qr-area hidden"
+      >
+
+        <h3>
+          Scan & Pay
+        </h3>
+
+        <div id="renewalQr"></div>
+
+        <p id="qrAmount">
+          Amount: ₹299
+        </p>
+
+        <p class="muted">
+          Payment करने के बाद नीचे UTR / Transaction ID डालें।
+        </p>
+
+      </div>
+
+
+      <!-- TRANSACTION DETAILS -->
+      <div class="transaction-box">
+
+        <h3>
+          Payment Details
+        </h3>
+
+        <div class="form-group">
+
+          <label for="transactionId">
+            UPI Transaction ID / UTR *
+          </label>
+
+          <input
+            id="transactionId"
+            type="text"
+            placeholder="Enter UTR / Transaction ID"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="paymentDate">
+            Payment Date *
+          </label>
+
+          <input
+            id="paymentDate"
+            type="date"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="paymentNote">
+            Note
+          </label>
+
+          <textarea
+            id="paymentNote"
+            rows="3"
+            placeholder="Optional note"
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="button"
+          id="submitRenewalBtn"
+          class="btn success large"
+        >
+          🔔 Submit Renewal Request
+        </button>
+
+      </div>
+
+
+      <!-- RESULT -->
+      <div
+        id="renewalResult"
+        class="message"
+      ></div>
+
+    </section>
+
+
+    <!-- INFORMATION -->
+    <section class="renewal-info">
+
+      <h3>How it works</h3>
+
+      <ol>
+
+        <li>
+          Select your renewal plan.
+        </li>
+
+        <li>
+          Pay using UPI QR / UPI ID.
+        </li>
+
+        <li>
+          Enter your UTR / Transaction ID.
+        </li>
+
+        <li>
+          Submit the renewal request.
+        </li>
+
+        <li>
+          Admin verifies the payment.
+        </li>
+
+        <li>
+          License is activated after verification.
+        </li>
+
+      </ol>
+
+    </section>
+
+
+    <!-- BACK -->
+    <div class="renewal-back">
+
+      <a href="./index.html">
+        ← Back to Hotel Software
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <!-- QR LIBRARY -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+  ></script>
+
+
+  <!-- RENEWAL JS -->
+  <script src="./js/renewal.js"></script>
+
+</body>
+</html>
